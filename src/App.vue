@@ -1,9 +1,9 @@
 <template>
   <div>
     <carousel>
-      <carousel-slide v-for="n in slides">
-        <div>Slide {{ n }}</div>
-        <img :src="'http://lorempixel.com/400/200/' + n">
+      <carousel-slide v-for="n in slides" :key="n.id">
+        <div style="text-align:center;background-color:rgba(233, 78, 78, 0.1);color:white;">Slide {{ n }}</div>
+        <img :src="'https://placeimg.com/510/300/any'">
       </carousel-slide>
     </carousel>
    <todos></todos>

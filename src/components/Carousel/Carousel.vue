@@ -1,13 +1,10 @@
 <template>
   <div class="todoapp carousel">
-    <header class="header">
-      <h1 style="color:lightcoral">Carousel</h1>
-    </header>
     <slot></slot>
     <button class="carousel__nav carousel__next" @click.prevent="next">Next</button>
     <button class="carousel__nav carousel__prev" @click.prevent="prev">Previous</button>
     <div class="carousel__pagination">
-      <button v-for="n in slidesCount" @click="goto(n-1)" :class="{active: n-1 == index}">{{ n }}</button>
+      <button v-for="n in slidesCount" :key="n.id" @click="goto(n-1)" :class="{active: n-1 == index}"></button>
     </div>
   </div>
 </template>
@@ -76,7 +73,14 @@ img {
 
 .carousel__nav.carousel__next {
   right: 10px;
+  border-radius: 50%;
   left: auto;
+}
+
+.carousel__nav.carousel__prev {
+  left: 10px;
+  border-radius: 50%;
+  right: auto;
 }
 
 .carousel__pagination {
@@ -99,6 +103,10 @@ img {
 
 .carousel__pagination button.active {
   background-color: #fff;
+}
+
+button:hover {
+  opacity: 0.9;
 }
 
 </style>

@@ -3,11 +3,11 @@
   <section class="todoapp">
 
       <header class="header">
-          <h1>Todos</h1>
-          <input type="text" class="new-todo" placeholder="Add a Task" v-model="newTodo" @keyup.enter="addTodo">
-      </header>
+          <h1>Carousel</h1>
+ <!--         <input type="text" class="new-todo" placeholder="Add a Task" v-model="newTodo" @keyup.enter="addTodo">
+ -->  </header>
       
-      <div class="main">
+   <!--   <div class="main">
         <input type="checkbox" class="toggle-all" v-model="allDone">
           <ul class="todo-list">
               <li class="todo" v-for="todo in filteredTodos" :class="{completed: todo.completed, editing: todo === editing}">
@@ -31,7 +31,7 @@
         </ul>
         <button class="clear-completed" @click.prevent="deleteCompleted" v-show="completed">Delete done</button>
       </footer>
-      
+      -->
       </section>
 
 </template>
